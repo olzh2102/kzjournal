@@ -11,10 +11,11 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import Button from '@mui/material/Button';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -120,7 +121,7 @@ const Header = () => {
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
-            <MailIcon />
+            <MailOutlineIcon />
           </Badge>
         </IconButton>
         <p>Messages</p>
@@ -128,7 +129,7 @@ const Header = () => {
       <MenuItem>
         <IconButton size="large" aria-label="show 17 new notifications" color="inherit">
           <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
+            <NotificationsNoneIcon />
           </Badge>
         </IconButton>
         <p>Notifications</p>
@@ -140,7 +141,7 @@ const Header = () => {
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           color="inherit">
-          <AccountCircle />
+          <PersonOutlineIcon />
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -164,7 +165,7 @@ const Header = () => {
             noWrap
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}>
-            MUI
+            KZ
           </Typography>
           <Search>
             <SearchIconWrapper>
@@ -172,16 +173,17 @@ const Header = () => {
             </SearchIconWrapper>
             <StyledInputBase placeholder="Search…" inputProps={{ 'aria-label': 'search' }} />
           </Search>
+          <Button variant="contained">New Post</Button>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="error">
-                <MailIcon />
+                <MailOutlineIcon />
               </Badge>
             </IconButton>
             <IconButton size="large" aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
+                <NotificationsNoneIcon />
               </Badge>
             </IconButton>
             <IconButton
@@ -192,7 +194,8 @@ const Header = () => {
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
               color="inherit">
-              <AccountCircle />
+              <PersonOutlineIcon />
+              Sign In
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
