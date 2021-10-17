@@ -1,20 +1,18 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import { Global, css } from '@emotion/react'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <> 
-      <Global 
-        styles={css`
-          body {
-            padding: 0 !important;
-            margin: 0 !important;
-          }
-        `} 
-      />
+import type { AppProps } from 'next/app'
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
+
+import { theme } from '../theme'
+
+
+const App = ({ Component, pageProps }: AppProps) => 
+  <> 
+    <MuiThemeProvider theme={theme}>
+      <CssBaseline />
       <Component {...pageProps} />
-    </>
-  )
-}
-export default MyApp
+    </MuiThemeProvider>
+  </>
+  
+export default App

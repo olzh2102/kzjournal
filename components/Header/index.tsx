@@ -127,7 +127,7 @@ const Header = () => {
             KZ
           </Typography>
           <SearchBar />
-          <Button variant="contained">New Post</Button>
+          <Button variant="contained" disableElevation style={{ backgroundColor: '#EBEAEC', color: '#313E50' }}>New post</Button>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
