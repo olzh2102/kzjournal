@@ -25,6 +25,8 @@ const Home: NextPage = () => {
         <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
       </Head>
       <Header />
+
+      {/* Layout  */}
       <Grid container spacing={3} style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <Grid item xs style={{backgroundColor: '#f7cc8d', height: '100vh'}}>
           Sidebar
