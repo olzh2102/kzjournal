@@ -1,7 +1,17 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-
+import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 import Header from '../components/Header';
+
+const Item = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +25,19 @@ const Home: NextPage = () => {
         <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
       </Head>
       <Header />
+
+      {/* Layout  */}
+      <Grid container spacing={3} style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <Grid item xs style={{backgroundColor: '#f7cc8d', height: '100vh'}}>
+          Sidebar
+        </Grid>
+        <Grid item xs={6} style={{ backgroundColor: '#ebeaec', height: '100vh' }}>
+          Main Content
+        </Grid>
+        <Grid item xs style={{ backgroundColor: '#912f40', height: '100vh' }}>
+          Comments
+        </Grid>
+      </Grid>
     </div>
   );
 };

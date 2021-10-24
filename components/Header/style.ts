@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 export const AppBarStyled = styled(AppBar)`
   background-color: #313e50;
-  position: static;
+  position: sticky;
 `;
 
 export const ButtonStyled = styled(Button)`
