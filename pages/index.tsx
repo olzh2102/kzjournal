@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
 import { Box, Button } from '@mui/material';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -10,13 +9,9 @@ import CallMissedOutgoingIcon from '@mui/icons-material/CallMissedOutgoing';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 
 import Header from '../components/Header';
+import ColorToggleButton from '../components/ToggleButtons';
 
-const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+const StyledHorizontalTab = styled(Button)(({ theme }) => ({}));
 
 const Home: NextPage = () => {
   return (
@@ -40,12 +35,7 @@ const Home: NextPage = () => {
           Sidebar
         </Grid>
         <Grid item xs={6} style={{ paddingLeft: 0 }}>
-          <Box display="flex" justifyContent="space-between">
-            <Button startIcon={<WhatshotIcon />}>Popular</Button>
-            <Button startIcon={<AccessTimeIcon />}>Lates</Button>
-            <Button startIcon={<CallMissedOutgoingIcon />}>Rating</Button>
-            <Button startIcon={<FormatListBulletedIcon />}>Subscriptions</Button>
-          </Box>
+          <ColorToggleButton />
         </Grid>
         <Grid item xs>
           Comments
