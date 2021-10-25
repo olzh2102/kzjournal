@@ -1,31 +1,10 @@
 import * as React from 'react';
-import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CallMissedOutgoingIcon from '@mui/icons-material/CallMissedOutgoing';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
-
-import { styled } from '@mui/material/styles';
-
-const StyledToggleButton = styled(ToggleButton)(({ theme }) => ({
-  '&.Mui-selected': {
-    backgroundColor: 'transparent',
-    position: 'relative',
-
-    '&::after': {
-      content: '""',
-      display: 'block',
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      height: '2px',
-      width: '100%',
-      backgroundColor: 'black',
-      transition: 'all 0.5s',
-    },
-  },
-}));
+import { StyledToggleButton } from './style';
 
 export default function ColorToggleButton() {
   const [alignment, setAlignment] = React.useState('popular');
@@ -41,19 +20,19 @@ export default function ColorToggleButton() {
       exclusive
       onChange={handleChange}
       sx={{ gap: '8px' }}>
-      <StyledToggleButton value="popular" size="small">
+      <StyledToggleButton value="popular" size="small" active={alignment === 'popular'}>
         <WhatshotIcon />
         Popular
       </StyledToggleButton>
-      <StyledToggleButton value="latest" size="small">
+      <StyledToggleButton value="latest" size="small" active={alignment === 'latest'}>
         <AccessTimeIcon />
         Latest
       </StyledToggleButton>
-      <StyledToggleButton value="rating" size="small">
+      <StyledToggleButton value="rating" size="small" active={alignment === 'rating'}>
         <CallMissedOutgoingIcon />
         Rating
       </StyledToggleButton>
-      <StyledToggleButton value="subscriptions" size="small">
+      <StyledToggleButton value="subscriptions" size="small" active={alignment === 'subscriptions'}>
         <FormatListBulletedIcon />
         Subscriptions
       </StyledToggleButton>

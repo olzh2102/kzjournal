@@ -10,7 +10,7 @@ export const Search = styled.div`
   &:hover {
     background-color: ${({ theme }: any) => theme.palette.common.white};
     border-color: #ffddad;
-    box-shadow: '0 0 0 3px rgb(229 160 64 / 12%)';
+    box-shadow: 0 0 0 3px rgb(229 160 64 / 12%);
   }
   margin: ${({ theme }: any) => theme.spacing(0, 2)};
   width: 250px;
