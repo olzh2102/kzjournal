@@ -1,10 +1,10 @@
-import AppBar from '@mui/material/AppBar';
-import Button from '@mui/material/Button';
 import styled from '@emotion/styled';
+import { AppBar, Button } from '@mui/material';
 
 export const AppBarStyled = styled(AppBar)`
-  background-color: #313e50;
+  background-color: #667182;
   position: sticky;
+  box-shadow: none;
 `;
 
 export const ButtonStyled = styled(Button)`

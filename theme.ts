@@ -14,6 +14,15 @@ export const theme = createTheme({
         },
       },
     },
+    MuiToggleButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'inherit',
+          border: 'none',
+          borderRadius: '5px !important',
+        },
+      },
+    },
     MuiInputBase: {
       styleOverrides: {
         input: {
