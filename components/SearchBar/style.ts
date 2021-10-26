@@ -4,7 +4,8 @@ import InputBase from '@mui/material/InputBase';
 export const Search = styled.div`
   position: relative;
   border-radius: ${({ theme }: any) => theme.shape.borderRadius}px;
-  background-color: ${({ theme }: any) => theme.palette.common.white};
+  background-color: #D9C5B2;
+  border: 1px solid black;
   color: black;
 
   &:hover {
