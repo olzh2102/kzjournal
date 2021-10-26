@@ -1,21 +1,31 @@
-import { ThemeProvider as EmotionThemeProvider } from '@mui/material';
-import '../styles/globals.css';
-
 import type { AppProps } from 'next/app';
-import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider as EmotionThemeProvider } from '@mui/material';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 
 import { theme } from '../theme';
+import Header from '../components/Header'
 
-const App = ({ Component, pageProps }: AppProps) => (
-  <>
+import '../styles/globals.css';
+
+const App = ({ Component, pageProps }: ComponentWithPageLayout) => (
     <MuiThemeProvider theme={theme}>
-      <EmotionThemeProvider theme={theme}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </EmotionThemeProvider>
+        <EmotionThemeProvider theme={theme}>
+            <CssBaseline />
+            <Header />
+
+            {Component.PageLayout 
+                ? <Component.PageLayout><Component {...pageProps} /></Component.PageLayout>
+                : <Component {...pageProps} />
+            }
+        </EmotionThemeProvider>
     </MuiThemeProvider>
-  </>
 );
 
 export default App;
+
+type ComponentWithPageLayout = AppProps & {
+    Component: AppProps['Component'] & {
+        PageLayout?: React.ComponentType
+    }
+}

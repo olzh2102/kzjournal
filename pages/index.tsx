@@ -1,19 +1,9 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
-import Grid from '@mui/material/Grid';
-import { styled } from '@mui/material/styles';
-import { Box, Button } from '@mui/material';
-import WhatshotIcon from '@mui/icons-material/Whatshot';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import CallMissedOutgoingIcon from '@mui/icons-material/CallMissedOutgoing';
-import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 
-import Header from '../components/Header';
 import ColorToggleButton from '../components/ToggleButtons';
+import MainLayout from '../layout';
 
-const StyledHorizontalTab = styled(Button)(({ theme }) => ({}));
-
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <div>
       <Head>
@@ -27,22 +17,11 @@ const Home: NextPage = () => {
           rel="stylesheet"
         />
       </Head>
-      <Header />
-
-      {/* Layout  */}
-      <Grid container spacing={3} style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <Grid item xs>
-          Sidebar
-        </Grid>
-        <Grid item xs={6} style={{ paddingLeft: 0 }}>
-          <ColorToggleButton />
-        </Grid>
-        <Grid item xs>
-          Comments
-        </Grid>
-      </Grid>
+      
+      <ColorToggleButton />  
     </div>
   );
 };
 
+Home.PageLayout = MainLayout;
 export default Home;

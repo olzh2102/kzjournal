@@ -8,14 +8,22 @@ export const StyledToggleButton = styled(ToggleButton)<{ active: boolean }>`
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 2px;
+    height: 3px;
     width: ${({ active }) => (active ? '100%' : '0')};
     background-color: black;
     transition: width 0.25s;
   }
 
+  &:hover {
+    background-color: transparent;
+  }
+
   &.Mui-selected {
     background-color: transparent;
     position: relative;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 `;

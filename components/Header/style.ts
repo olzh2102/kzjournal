@@ -2,14 +2,17 @@ import styled from '@emotion/styled';
 import { AppBar, Button } from '@mui/material';
 
 export const AppBarStyled = styled(AppBar)`
-  background-color: #667182;
+  background-color: white;
   position: sticky;
   box-shadow: none;
+  color: black;
 `;
 
 export const ButtonStyled = styled(Button)`
-  background-color: #ebeaec;
+  background-color: #D9C5B2;
   color: #313e50;
+  border: 1px solid black;
+  font-weight: bold;
 
   &:hover {
     background-color: #ebeaec;
