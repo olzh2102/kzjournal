@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Paper from '@mui/material/Paper'
+import Paper from '@mui/material/Paper';
 
 import ColorToggleButton from '../components/ToggleButtons';
-import Post from '../components/Post'
+import Post from '../components/Post';
 import MainLayout from '../layout';
 
 const Home = () => {
@@ -19,9 +19,9 @@ const Home = () => {
           rel="stylesheet"
         />
       </Head>
-      
-      <ColorToggleButton /> 
-      <Post /> 
+
+      <ColorToggleButton />
+      <Post />
     </>
   );
 };
