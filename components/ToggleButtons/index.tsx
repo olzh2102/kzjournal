@@ -21,7 +21,7 @@ const ColorToggleButton = () => {
       value={alignment}
       exclusive
       onChange={handleChange}
-      sx={{ gap: '8px', mb: 4 }}
+      sx={{ gap: '8px' }}
     >
       <StyledToggleButton value="popular" size="small" active={alignment === 'popular'}>
         <WhatshotIcon />
