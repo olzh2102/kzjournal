@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { Box, Collapse } from '@mui/material';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 import CommentItem from './CommentItem';
 
@@ -14,18 +14,18 @@ const SideComments = () => {
       <StyledButton
         onClick={() => setVisible(!visible)}
         rotated={!visible}
-        endIcon={<KeyboardArrowRightIcon className="arrow-icon" />}
+        endIcon={<KeyboardArrowUpIcon className="chevron" />}
         fullWidth
         disableRipple>
         Comments
       </StyledButton>
-      {visible && (
+      <Collapse in={visible} orientation="vertical">
         <Box display="flex" flexDirection="column" gap="1rem">
           <CommentItem />
           <CommentItem />
           <CommentItem />
         </Box>
-      )}
+      </Collapse>
     </Box>
   );
 };

@@ -41,14 +41,12 @@ export const StyledButton = styled(Button)<{ rotated: boolean }>`
   font-weight: 600;
   justify-content: flex-start;
   padding: 7px 0;
-  transform: ${({ rotated }) => (rotated ? 'rotate(-90deg) translateX(70%)' : 'none')};
-  transform-origin: ${({ rotated }) => (rotated ? 'right' : 'none')};
 
   &:hover {
     background-color: transparent;
   }
 
-  .arrow-icon {
-    transform: ${({ rotated }) => (rotated ? 'rotate(270deg)' : 'none')};
+  .chevron {
+    transform: ${({ rotated }) => (rotated ? 'rotate(180deg)' : 'none')};
   }
 `;
