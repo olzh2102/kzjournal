@@ -2,6 +2,9 @@ import styled from '@emotion/styled';
 import ToggleButton from '@mui/material/ToggleButton';
 
 export const StyledToggleButton = styled(ToggleButton)<{ active: boolean }>`
+  justify-content: center;
+  gap: 1rem;
+  
   &::after {
     content: '';
     display: block;
