@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Paper from '@mui/material/Paper';
 
 import ColorToggleButton from '../components/ToggleButtons';
 import Post from '../components/Post';

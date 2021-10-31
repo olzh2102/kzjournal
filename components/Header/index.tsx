@@ -1,4 +1,4 @@
-import * as React from 'react';
+import Link from 'next/link'
 
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -15,9 +15,11 @@ const Header = () => (
     <HeaderLayout>
         <HeaderLayout.Left>
             <IconBtn icon={<MenuIcon />} edge="start" sx={{ mr: 2 }} />
-            <Typography variant="h6" sx={{ fontFamily: 'Mukta' }}>
-              KZ
-            </Typography>
+            <Link href="/">
+              <Typography variant="h6" sx={{ fontFamily: 'Mukta', cursor: 'pointer' }}>
+                KZ
+              </Typography>
+            </Link>
             <SearchBar />
             <ButtonStyled variant="contained" disableElevation>
               New post
@@ -27,7 +29,7 @@ const Header = () => (
         <HeaderLayout.Right>
             <IconBtn icon={<TextsmsOutlinedIcon />} />
             <IconBtn icon={<NotificationsNoneIcon />} />
-            <AvatarStyled>AB</AvatarStyled>
+            <Link href="/profile"><AvatarStyled>AB</AvatarStyled></Link>
         </HeaderLayout.Right>
     </HeaderLayout>
 );
