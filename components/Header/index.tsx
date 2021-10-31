@@ -2,15 +2,14 @@ import * as React from 'react';
 
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import SmsIcon from '@mui/icons-material/Sms';
+import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 
 import HeaderLayout from './HeaderLayout';
 import IconBtn from '../IconBtn';
 import SearchBar from '../SearchBar';
 
-import { ButtonStyled } from './style';
+import { ButtonStyled, AvatarStyled} from './style';
 
 const Header = () => (
     <HeaderLayout>
@@ -26,9 +25,9 @@ const Header = () => (
         </HeaderLayout.Left>
 
         <HeaderLayout.Right>
-            <IconBtn icon={<SmsIcon />} />
+            <IconBtn icon={<TextsmsOutlinedIcon />} />
             <IconBtn icon={<NotificationsNoneIcon />} />
-            <IconBtn icon={<PersonOutlineIcon />} edge="end" />
+            <AvatarStyled>AB</AvatarStyled>
         </HeaderLayout.Right>
     </HeaderLayout>
 );

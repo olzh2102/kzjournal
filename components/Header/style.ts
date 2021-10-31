@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { AppBar, Button } from '@mui/material';
+import { AppBar, Button, Avatar } from '@mui/material';
 
 export const AppBarStyled = styled(AppBar)`
   background-color: white;
@@ -20,3 +20,14 @@ export const ButtonStyled = styled(Button)`
       0 -1px 0 rgba(0, 0, 0, 0.05), -1px 0 0 rgba(0, 0, 0, 0.05), 1px 0 0 rgba(0, 0, 0, 0.05);
   }
 `;
+
+export const AvatarStyled = styled(Avatar)`
+  width: 35px;
+  height: 35px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  background-color: #D9C5B2;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+`
