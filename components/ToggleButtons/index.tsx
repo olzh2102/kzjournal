@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
@@ -9,7 +9,7 @@ import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import { StyledToggleButton } from './style';
 
 const ColorToggleButton = () => {
-  const [alignment, setAlignment] = React.useState('popular');
+  const [alignment, setAlignment] = useState('popular');
 
   const handleChange = (event: React.MouseEvent<HTMLElement>, newAlignment: string) => {
     setAlignment(newAlignment);
@@ -21,7 +21,7 @@ const ColorToggleButton = () => {
       value={alignment}
       exclusive
       onChange={handleChange}
-      sx={{ gap: '8px', mb: 4 }}
+      sx={{ gap: '16px', mb: 4, justifyContent: 'center' }}
     >
       <StyledToggleButton value="popular" size="small" active={alignment === 'popular'}>
         <WhatshotIcon />

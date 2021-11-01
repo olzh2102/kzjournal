@@ -18,5 +18,5 @@ HeaderLayout.Left = ({ children }: any) => (
   </Box>
 );
 
-HeaderLayout.Right = ({ children }: any) => <Box>{children}</Box>;
+HeaderLayout.Right = ({ children }: any) => <Box display="flex" alignItems="center" style={{ gap: '8px' }}>{children}</Box>;
 export default HeaderLayout;
