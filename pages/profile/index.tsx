@@ -1,10 +1,11 @@
 import Head from 'next/head'
+import {Box} from '@mui/material';
 
-import MainLayout from '../../layout'
+import WithoutComments from '../../layout/without-comments'
 
 const ProfilePage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>My page title</title>
         <meta property="og:title" content="My page title" key="title" />
@@ -12,10 +13,13 @@ const ProfilePage = () => {
       <Head>
         <meta property="og:title" content="My new title" key="title" />
       </Head>
-      <h3>Profile Page</h3>
-    </div>
+      <Box>
+        Profile Page
+      </Box>
+    </>
+    
   )
 }
 
-ProfilePage.PageLayout = MainLayout
+ProfilePage.PageLayout = WithoutComments
 export default ProfilePage

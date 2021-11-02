@@ -1,6 +1,5 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
+import {Box, Toolbar} from '@mui/material';
 
 import { AppBarStyled } from './style';
 
