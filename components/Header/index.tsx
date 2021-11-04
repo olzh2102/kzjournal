@@ -55,9 +55,11 @@ const Header = () => {
               Profile
             </MenuItem>
           </Link>
-          <MenuItem onClick={handleMenuClose} disableRipple>
-            Settings
-          </MenuItem>
+          <Link href="/profile/settings">
+            <MenuItem onClick={handleMenuClose} disableRipple>
+              Settings
+            </MenuItem>
+          </Link>
         </Menu>
       </HeaderLayout.Right>
     </HeaderLayout>
