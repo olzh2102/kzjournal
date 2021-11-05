@@ -7,7 +7,7 @@ const ProfilePage = () => {
   return (
     <>
       <Head>
-        <title>My page title</title>
+        <title>KZJournal - profile</title>
         <meta property="og:title" content="My page title" key="title" />
       </Head>
       <Head>
