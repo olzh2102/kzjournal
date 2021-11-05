@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-import { Menu, MenuItem, Typography } from '@mui/material';
+import { IconButton, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
@@ -10,6 +10,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import HeaderLayout from './HeaderLayout';
 import IconBtn from '../IconBtn';
 import SearchBar from '../SearchBar';
+import ProfileMenu from './ProfileMenu';
 
 import { ButtonStyled, AvatarStyled } from './style';
 
@@ -47,20 +48,10 @@ const Header = () => {
         <Link href="/profile">
           <AvatarStyled>AB</AvatarStyled>
         </Link>
-        <IconBtn icon={<KeyboardArrowDownIcon />} onClick={handleProfileMenuOpen} />
-
-        <Menu anchorEl={anchorEl} open={isMenuOpen} onClose={handleMenuClose}>
-          <Link href="/profile">
-            <MenuItem onClick={handleMenuClose} disableRipple>
-              Profile
-            </MenuItem>
-          </Link>
-          <Link href="/profile/settings">
-            <MenuItem onClick={handleMenuClose} disableRipple>
-              Settings
-            </MenuItem>
-          </Link>
-        </Menu>
+        <IconButton size="small" color="inherit" onClick={handleProfileMenuOpen} disableRipple>
+          <KeyboardArrowDownIcon />
+        </IconButton>
+        <ProfileMenu anchorEl={anchorEl} open={isMenuOpen} onClose={handleMenuClose} />
       </HeaderLayout.Right>
     </HeaderLayout>
   );
