@@ -1,8 +1,8 @@
 import Head from 'next/head';
 
-import ColorToggleButton from '../components/ToggleButtons';
-import Post from '../components/Post';
-import MainLayout from '../layout';
+import ColorToggleButton from 'components/ToggleButtons';
+import Post from 'components/Post';
+import MainLayout from 'layout';
 
 const Home = () => {
   return (

@@ -1,5 +1,5 @@
 import Grid from '@mui/material/Grid';
-import SideComments from '../components/SideComments';
+import SideComments from 'components/SideComments';
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => (
   <Grid container spacing={3} style={{ maxWidth: '1200px', margin: '0 auto' }}>
