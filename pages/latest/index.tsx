@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Box } from '@mui/material';
 
-import WithoutComments from '../../layout/without-comments';
+import WithoutComments from 'layout/without-comments';
 
 const ProfilePage = () => {
   return (

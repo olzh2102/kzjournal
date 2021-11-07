@@ -7,9 +7,9 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
+import IconBtn from 'components/IconBtn';
+import SearchBar from 'components/SearchBar';
 import HeaderLayout from './HeaderLayout';
-import IconBtn from '../IconBtn';
-import SearchBar from '../SearchBar';
 import ProfileMenu from './ProfileMenu';
 
 import { ButtonStyled, AvatarStyled } from './style';

@@ -3,10 +3,10 @@ import { ThemeProvider as EmotionThemeProvider } from '@mui/material';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import { theme } from '../theme';
-import Header from '../components/Header';
+import { theme } from 'theme';
+import Header from 'components/Header';
 
-import '../styles/globals.css';
+import 'styles/globals.css';
 
 const App = ({ Component, pageProps }: ComponentWithPageLayout) => (
   <MuiThemeProvider theme={theme}>
