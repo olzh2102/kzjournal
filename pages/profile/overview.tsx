@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import {Box, Typography} from '@mui/material';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
-
+import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 import { PaperStyled } from './style'
 
 const Overview = () => {
@@ -11,17 +12,32 @@ const Overview = () => {
             <Box>
                 <Typography variant="h5">Yevgeniy Chebatkov</Typography>
                 <Typography variant="subtitle2">With us since 17th of October, 2021</Typography>
-                <Box 
-                    style={{
-                        display: 'inline-flex',
-                        padding: '10px',
-                        border: '1px solid black',
-                        borderRadius: '8px',
-                        backgroundColor: '#d9c5b2',
-                        cursor: 'pointer'
-                    }}>
-                    <MessageOutlinedIcon fontSize="small" />
-                </Box>
+            </Box>
+
+            <Box>
+                <IconButton aria-label="delete" size="small">
+                    <MessageOutlinedIcon fontSize="inherit" />
+                </IconButton>
+                <IconButton aria-label="delete" size="small">
+                    <MessageOutlinedIcon fontSize="inherit" />
+                </IconButton>
+                <IconButton aria-label="delete" size="small">
+                    <MessageOutlinedIcon fontSize="inherit" />
+                </IconButton>
+                <IconButton aria-label="delete" size="small">
+                    <MessageOutlinedIcon fontSize="inherit" />
+                </IconButton>
+                <IconButton aria-label="delete" size="small">
+                    <MessageOutlinedIcon fontSize="inherit" />
+                </IconButton>             
+            </Box>
+            <Box>
+                <Button variant="outlined" size="small">
+                    Settings
+                </Button>
+                <Button variant="contained" size="small">
+                    Post
+                </Button>
             </Box>
         </PaperStyled>
     )
