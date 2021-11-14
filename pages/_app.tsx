@@ -11,22 +11,22 @@ import Header from 'components/Header';
 import 'styles/globals.css';
 
 const App = ({ Component, pageProps }: ComponentWithPageLayout) => (
-  <MuiThemeProvider theme={theme}>
-    <EmotionThemeProvider theme={theme}>
-      <CssBaseline />
-      <Header />
+    <MuiThemeProvider theme={theme}>
+      <EmotionThemeProvider theme={theme}>
+        <CssBaseline />
+        <Header />
 
-      <AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
-        {Component.PageLayout ? (
-          <Component.PageLayout>
+        <AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+          {Component.PageLayout ? (
+            <Component.PageLayout>
+              <Component {...pageProps} />
+            </Component.PageLayout>
+          ) : (
             <Component {...pageProps} />
-          </Component.PageLayout>
-        ) : (
-          <Component {...pageProps} />
-        )}
-      </AnimatePresence>
-    </EmotionThemeProvider>
-  </MuiThemeProvider>
+          )}
+        </AnimatePresence>
+      </EmotionThemeProvider>
+    </MuiThemeProvider>
 );
 
 export default App;

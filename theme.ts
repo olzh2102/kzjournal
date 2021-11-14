@@ -1,6 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
+  typography: {
+    fontFamily: 'Mukta'
+  },
   palette: {
     primary: {
       main: '#313e50',
